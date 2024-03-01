@@ -1,8 +1,8 @@
+require("dotenv").config();
+
 const mongoose = require("mongoose");
 
-mongoose.connect(
-  "mongodb+srv://rickylaikhuram:O44bPKp55w4y6Z2e@cluster0.svkfdlr.mongodb.net/jobPortal"
-);
+mongoose.connect(process.env.DATABASEURL);
 
 const RecruiterSchema = new mongoose.Schema({
   email: String,
